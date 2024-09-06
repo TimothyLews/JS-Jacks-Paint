@@ -8,12 +8,12 @@ function configureListeners() {
 }
 
 function addOpacity(event) {
-    event.target.classList.add('hover-opacity'); // Add CSS class to reduce opacity
+    event.target.classList.add('dim'); // Add CSS class to reduce opacity
     getProductInfo(event.target.id); // Get product info based on the image ID
 }
 
 function removeOpacity(event) {
-    event.target.classList.remove('hover-opacity'); // Remove CSS class to restore opacity
+    event.target.classList.remove('dim'); // Remove CSS class to restore opacity
 
     let element = document.getElementById('color-price');
     element.textContent = ''; // Clear the price text
@@ -28,7 +28,6 @@ function getProductInfo(paintColor) {
     let price;
     let colorName;  
     
-    // Set price and color name based on the paintColor ID
     switch (paintColor) {
         case 'pn1':
             colorName = 'Lime Green';
